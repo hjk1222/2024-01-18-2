@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+a{
+    text-decoration: none;
+    color: inherit;    
+}
+
+ul,li,ol{
+    list-style: none;
+}
+
+body{
+    background: white;
+    color: #333;
+    font-family: "돋움";
+    font-size: 14px;
+}
+
+#wrap{}
+
+#header{
+    width: 100%;
+    height: 100px;
+    background-color: aliceblue;
+}
+.head_inner{
+    width: 1200px;
+    height: 100px;
+    background-color: burlywood;
+    margin: 0 auto;
+}
+
+.logo{
+    /* 로고: 200*40 */
+    float: left;
+    /* head_inner 가 부모. 높이 설정해놨음 */
+
+    width: 200px;
+    height: 100px;   
+}
+
+.logo a{
+    display: block;
+    padding-top: 30px;
+}
+
+.nav{
+    float: right;
+    /* 네비영역 main글자 sub글자 전체덩어리를 우측으로 몰아준거임 구조물 자체를 */
+    margin-top: 25px;
+}
+/* main은 큰 주제애들만 꾸며주는거임!!!! */
+.main{}
+.main > li{
+    /* 부등호: 후손은 안찾아! 직계자식만 셀렉 */
+    float: left;
+    /* 부모한테는 높이값 height 걸지 않음!!!! 자식 a 한테 걸어줘야함 */
+    /* li자체 구조를 오른쪽으로 향하게 주르륵 정렬해주는거임, 세로로 아래방향으로 주르륵 있던거를 오른쪽으로 주르륵 보낸거임 */
+    position: relative;
+    /* sub메뉴들의 부모 */
+}
+.main > li > a{
+    display: block;
+    /* 부모가 플롯되어서 너비가 없거든 만들어줘야함 여기에 */
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: cadetblue;
+    color: aliceblue;
+}
+.main > li:hover > a{
+    background-color: tomato;
+}
+
+
+.sub{
+    /* 서브메뉴는 포지션을 뜯어야 된다! */
+    position: absolute;
+    /* 너비사라짐 */
+    width: 100%;
+    /* width: 150px; 도 가능함 */
+    left: 0;
+    
+    top: 50px; 
+    /* 탑부터 50px 떨어지도록 위치 잡아주기 */
+    height: 160px;
+    /* 서브li 40px*4 = 160px */
+    background-color: tomato;
+
+    display: none;
+}
+
+.sub li{}
+.sub li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    
+    color: white;
+    /* 통으로 떨어지는 서브메뉴 */
+}
+.sub li a:hover{
+    background-color: cadetblue;
+}
+    
+
+
+
+
+#section{
+    width: 100%;
+    height: 500px;
+    background-color: aqua;
+}
+
+.section_inner{
+    width: 1200px;
+    height: 500px;
+    background-color: yellowgreen;
+    margin: 0 auto;
+}
+
+#footer{
+    width: 100%;
+    height: 100px;
+    background-color: bisque;
+}
+.footer_inner{
+    width: 1200px;
+    height: 100px;
+    background-color: violet;
+    margin: 0 auto;
+}
+
